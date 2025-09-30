@@ -1,0 +1,17 @@
+# render.yaml
+services:
+  - type: web                 # Web service
+    name: vehicle-predictor   # Name of your service
+    plan: free                # Free plan
+    branch: main              # Branch to watch for changes
+    autoDeploy: true          # Redeploy on every push to branch
+    dockerfilePath: Dockerfile  # Path to your Dockerfile (relative to repo root)
+    runtime: docker           # Required for Docker services
+
+    envVars:                  # Environment variable
+      - key: MONGODB_URL
+        value: ""             # Set actual value in Render Dashboard
+      - key: B2_KEY_ID
+        value: ""
+      - key: B2_APP_KEY
+        value: ""

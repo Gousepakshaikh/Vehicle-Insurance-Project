@@ -1,0 +1,12 @@
+[project]
+name="src"
+version="0.0.1"
+description="Package for vehicle Insurance Project"
+authors=[{name="Wanted SG",email="gousepakshaikh14112002@gmail.com"}]
+
+[tool.setuptools]
+packages={find={}}
+
+[tool.setuptools.dynamic]
+dependencies={file=["requirements.txt"]}
+
